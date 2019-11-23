@@ -10,22 +10,15 @@ describe('Christmas Monster text message generator',  () => {
     it('generates a scary text for all monsters',  () => {
         // given we execute the function
         let message = messenger.getRandomMessage()
-        let statementFound = false;
+        let allStatements = messenger.getAllStatements()
         
-        // find out if there is a match
-        messenger.monsterData.forEach( (monster) => {
-            const monsterMatches = monster.scaryStatements.filter( (statement) => {
-                return statement === message
-            } )
-
-            if (monsterMatches.length > 0) {
-                statementFound = true;
-            }
-
-        } )
+        const matches = allStatements.filter( (statement) => {
+            return message = statement
+        })
 
         // we expect at least one match
-        expect(statementFound).to.equal(true)
+        expect(matches.length > 0).to.equal(true)
+        // TODO? any way in Chai? expect(allStatements).to.have.keys(message);
     })
 
     it.skip('does not send more than one text per hour',  () => {

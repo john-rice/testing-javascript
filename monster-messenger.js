@@ -10,7 +10,16 @@ function getRandomMessage () {
     return statement
 }
 
+function getAllStatements () {
+    let allStatements = []
+    monsterData.forEach( (monster) => {
+        allStatements.push(monster.scaryStatements)
+    } )
+    return allStatements
+}
+
 module.exports = {
     getRandomMessage,
+    getAllStatements,
     monsterData
 }
