@@ -1,4 +1,16 @@
-// monsters used to send messages from
-// - name : string
-// - location : string
-// - scary statements : array of strings
+[{
+    "name": "KRAMPUS",
+    "location": "South Pole",
+    "scaryStatements": ["Don't make me spank you!"],
+    "lastMessage": 1574506800
+}, {
+    "name": "BELSNICKEL",
+    "location": "Germany",
+    "scaryStatements": ["Here's your coal"],
+    "lastMessage": 1574506800
+}, {
+    "name": "The Bumblee",
+    "location": "North Pole",
+    "scaryStatements": ["Rawwwwzzzasnazle!"],
+    "lastMessage": 1574506800
+}]

@@ -10,10 +10,22 @@ describe('Christmas Monster text message generator',  () => {
     it('generates a scary text for all monsters',  () => {
         // given we execute the function
         let message = messenger.getRandomMessage()
-        let expectedMessage = 'RAwwwwwwww!'
+        let statementFound = false;
+        
+        // find out if there is a match
+        messenger.monsterData.forEach( (monster) => {
+            const monsterMatches = monster.scaryStatements.filter( (statement) => {
+                return statement === message
+            } )
 
-        // we expect this result
-        expect(message).to.equal(expectedMessage)
+            if (monsterMatches.length > 0) {
+                statementFound = true;
+            }
+
+        } )
+
+        // we expect at least one match
+        expect(statementFound).to.equal(true)
     })
 
     it.skip('does not send more than one text per hour',  () => {
