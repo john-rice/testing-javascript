@@ -1,0 +1,4 @@
+// monsters used to send messages from
+// - name : string
+// - location : string
+// - scary statements : array of strings
